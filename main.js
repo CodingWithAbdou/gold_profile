@@ -3,7 +3,7 @@
 const dataProject = [
   {
     TypeProject: "mini-project",
-    rootImage: "./images/pro21.PNG",
+    rootImage: "./images/pro21.png",
     altImage: "Project Twentyone",
     titleProject: "Weather App",
     aboutProject: "Web Development",
@@ -22,7 +22,7 @@ const dataProject = [
 
   {
     TypeProject: "template",
-    rootImage: "./images/pro1.PNG",
+    rootImage: "./images/pro1.png",
     altImage: "Project One",
     titleProject: "bondi",
     aboutProject: "Web Development",
@@ -33,7 +33,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro3.PNG",
+    rootImage: "./images/pro3.png",
     altImage: "Project Three",
     titleProject: "Tech Educa",
     aboutProject: "Web Development",
@@ -44,7 +44,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro4.PNG",
+    rootImage: "./images/pro4.png",
     altImage: "Project Four",
     titleProject: "Hospital",
     aboutProject: "Web Development",
@@ -55,7 +55,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro5.PNG",
+    rootImage: "./images/pro5.png",
     altImage: "Project Five",
     titleProject: "Dachboard",
     aboutProject: "Web Development",
@@ -66,7 +66,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro6.PNG",
+    rootImage: "./images/pro6.png",
     altImage: "Project Six",
     titleProject: "mixanTemplate",
     aboutProject: "Web Development",
@@ -77,7 +77,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro7.PNG",
+    rootImage: "./images/pro7.png",
     altImage: "Project Seven",
     titleProject: "Kasper",
     aboutProject: "Web Development",
@@ -88,7 +88,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro2.PNG",
+    rootImage: "./images/pro2.png",
     altImage: "Project Two",
     titleProject: "Bookish",
     aboutProject: "Web Development",
@@ -100,7 +100,7 @@ const dataProject = [
 
   {
     TypeProject: "template",
-    rootImage: "./images/pro8.PNG",
+    rootImage: "./images/pro8.png",
     altImage: "Project Eight",
     titleProject: "Composition",
     aboutProject: "Web Development",
@@ -111,7 +111,7 @@ const dataProject = [
   },
   {
     TypeProject: "template",
-    rootImage: "./images/pro9.PNG",
+    rootImage: "./images/pro9.png",
     altImage: "Project Nine",
     titleProject: "Agency",
     aboutProject: "Web Development",
@@ -123,7 +123,7 @@ const dataProject = [
 
   {
     TypeProject: "other",
-    rootImage: "./images/pro10.PNG",
+    rootImage: "./images/pro10.png",
     altImage: "Project Ten",
     titleProject: "Slider__Responsive",
     aboutProject: "Web Development",
@@ -134,7 +134,7 @@ const dataProject = [
   },
   {
     TypeProject: "game",
-    rootImage: "./images/pro11.PNG",
+    rootImage: "./images/pro11.png",
     altImage: "Project eleven",
     titleProject: "Hangeman",
     aboutProject: "Web Development",
@@ -145,7 +145,7 @@ const dataProject = [
   },
   {
     TypeProject: "other",
-    rootImage: "./images/pro12.PNG",
+    rootImage: "./images/pro12.png",
     altImage: "Project Twelve",
     titleProject: "Nice_Effect",
     aboutProject: "Web Development",
@@ -156,7 +156,7 @@ const dataProject = [
   },
   {
     TypeProject: "mini-project",
-    rootImage: "./images/pro13.PNG",
+    rootImage: "./images/pro13.png",
     altImage: "Project Thirteen",
     titleProject: "Sounds_player",
     aboutProject: "Web Development",
@@ -167,7 +167,7 @@ const dataProject = [
   },
   {
     TypeProject: "mini-project",
-    rootImage: "./images/pro14.PNG",
+    rootImage: "./images/pro14.png",
     altImage: "Project fourteenth",
     titleProject: "Nice_image_slider",
     aboutProject: "Web Development",
@@ -178,7 +178,7 @@ const dataProject = [
   },
   {
     TypeProject: "game",
-    rootImage: "./images/pro15.PNG",
+    rootImage: "./images/pro15.png",
     altImage: "Project fifteenth",
     titleProject: "Speed_typing",
     aboutProject: "Web Development",
@@ -189,7 +189,7 @@ const dataProject = [
   },
   {
     TypeProject: "min-project",
-    rootImage: "./images/pro16.PNG",
+    rootImage: "./images/pro16.png",
     altImage: "Project sixteenth",
     titleProject: "Simple_toDo",
     aboutProject: "Web Development",
@@ -201,7 +201,7 @@ const dataProject = [
 
   {
     TypeProject: "mini-project",
-    rootImage: "./images/pro17.PNG",
+    rootImage: "./images/pro17.png",
     altImage: "Project seventeenth",
     titleProject: "quiz",
     aboutProject: "Web Development",
@@ -212,7 +212,7 @@ const dataProject = [
   },
   {
     TypeProject: "mini-project",
-    rootImage: "./images/pro18.PNG",
+    rootImage: "./images/pro18.png",
     altImage: "Project Eighteen ",
     titleProject: "GetRepo",
     aboutProject: "Web Development",
@@ -223,7 +223,7 @@ const dataProject = [
   },
   {
     TypeProject: "other",
-    rootImage: "./images/pro19.PNG",
+    rootImage: "./images/pro19.png",
     altImage: "Project Nineteen",
     titleProject: "listOpen",
     aboutProject: "Web Development",
@@ -234,7 +234,7 @@ const dataProject = [
   },
   {
     TypeProject: "game",
-    rootImage: "./images/pro20.PNG",
+    rootImage: "./images/pro20.png",
     altImage: "Project Twenty",
     titleProject: "memoryGame",
     aboutProject: "Web Development",
