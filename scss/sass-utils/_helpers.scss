@@ -1,0 +1,132 @@
+@use "./variables" as *;
+
+// related with flex
+
+.f-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.f-spaceBetween {
+  display: flex;
+  align-items: cwenter;
+  justify-content: space-between;
+}
+.f-starting {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// spacing
+
+.w-100 {
+  width: 100%;
+}
+.h-100 {
+  height: 100%;
+}
+
+// for all article and sidbar
+
+.design {
+  background: $color-odd;
+  border: 0.1rem solid $color-jet;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: $shadow-1;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 567px) {
+    width: 52rem;
+    margin-inline: auto;
+    padding: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 70rem;
+  }
+
+  @media (min-width: 1024px) {
+    width: 95rem;
+    box-shadow: $shadow-5;
+  }
+
+  @media (min-width: 1250px) {
+    width: auto;
+  }
+}
+
+.title__article {
+  position: relative;
+  padding-block-end: 0.7rem;
+  margin-block-end: 1.5rem;
+
+  &::first-letter {
+    color: $color-orange;
+  }
+
+  @media (min-width: 576px) {
+    margin-block-end: 2rem;
+    &::after {
+      width: 4rem;
+      height: 0.5rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 40%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: -25px;
+    background: $bg-gr-yellow-1;
+    opacity: 0.5;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3rem;
+    height: 0.3rem;
+    background: $text-gr-yellow;
+    border-radius: 0.3rem;
+  }
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  height: 0.7rem;
+}
+
+.has-scrollbar::-webkit-scrollbar-track {
+  background: $color-onyx;
+  border-radius: 0.5rem;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background: $color-gold;
+  border-radius: 0.5rem;
+}
+
+.has-scrollbar::-webkit-scrollbar-button {
+  width: 2rem;
+  @media (min-width: 768px) {
+    width: 12rem;
+  }
+}
+
+// placeholder
+
+%forAwsomBack {
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: $bg-gr-jet;
+  z-index: -1;
+}

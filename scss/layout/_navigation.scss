@@ -1,0 +1,80 @@
+@use "../sass-utils/helpers" as *;
+@use "../sass-utils/variables" as *;
+@use "../sass-utils/animation" as *;
+
+#navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 1.2rem 1.2rem 0 0;
+  background: rgba($color-onyx, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid $color-onyx;
+  box-shadow: $shadow-2;
+  z-index: 3;
+
+  @media (min-width: 567px) {
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  @media (min-width: 1024px) {
+    position: absolute;
+    bottom: auto;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: fit-content;
+    border-radius: 0 2rem;
+    padding-inline: 2rem;
+    box-shadow: none;
+  }
+
+  .navigation__list {
+    padding-inline: 0rem;
+
+    @media (min-width: 567px) {
+      padding-inline: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 3rem;
+      padding-inline: 2rem;
+    }
+
+    .navigation__link {
+      padding: 2rem 1rem;
+      gap: 8px;
+      color: $color-gray;
+      font-size: 1.1rem;
+      transition: $transition-1;
+
+      ion-icon {
+        display: none;
+      }
+      @media (min-width: 567px) {
+        font-size: 1.4rem;
+        ion-icon {
+          display: block;
+          font-size: 18px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-weight: $fw-500;
+      }
+
+      &:is(:hover, :focus) {
+        color: $color-gray-70;
+      }
+
+      &.active {
+        color: $color-orange;
+      }
+    }
+  }
+}

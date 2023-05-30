@@ -1,0 +1,17 @@
+@use "../sass-utils/variables" as *;
+
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: $color-jet;
+  margin-block: 1.6rem;
+
+  @media (min-width: 567px) {
+    margin-block: 3.2rem;
+  }
+
+  @media (min-width: 1250px) {
+    margin-block: 15px;
+    opacity: 0;
+  }
+}

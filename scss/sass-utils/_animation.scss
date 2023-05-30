@@ -1,0 +1,59 @@
+@keyframes lazyShow {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes backanimate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-30vh) scale(0.7);
+  }
+}
+
+@keyframes upDown {
+  0%,
+  20%,
+  75%,
+  100% {
+    transform: translateY(-89px);
+  }
+
+  25%,
+  70% {
+    transform: translateY(-33px);
+  }
+}
+
+@keyframes ping {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fill {
+  0% {
+    stroke-dashoffset: 690;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

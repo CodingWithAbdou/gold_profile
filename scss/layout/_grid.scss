@@ -1,0 +1,23 @@
+@use "../sass-utils/variables" as *;
+
+.container {
+  padding-inline: 1.2rem;
+  padding-block: 1.5rem 7.5rem;
+  min-width: 260px;
+
+  @media (min-width: 576px) {
+    padding-block: 6rem 10rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-block-end: 6rem;
+  }
+
+  @media (min-width: 1250px) {
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+}

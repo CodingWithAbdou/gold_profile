@@ -1,0 +1,335 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils/animation" as *;
+
+#sidebar {
+  max-height: 11.2rem;
+  transition: $transition-2;
+  overflow: hidden;
+
+  @media (min-width: 567px) {
+    max-height: 18rem;
+    margin-block-end: 3rem;
+  }
+
+  @media (min-width: 1250px) {
+    position: sticky;
+    top: 6rem;
+    max-height: max-content;
+    height: 100%;
+    margin-bottom: 0;
+    padding-top: 6rem;
+    z-index: 1;
+  }
+
+  &.active {
+    max-height: 40.5rem;
+
+    @media (min-width: 567px) {
+      max-height: 58.4rem;
+    }
+
+    #info-more-btn > ion-icon {
+      transform: rotate(180deg);
+    }
+
+    #sidebar__info-more {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  #sidebar__info {
+    position: relative;
+    gap: 1.6em;
+
+    @media (min-width: 567px) {
+      gap: 2.5rem;
+    }
+
+    @media (min-width: 1250px) {
+      flex-direction: column;
+    }
+
+    .perant_avatar {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(
+          to bottom right,
+          #ffda6b5d 0%,
+          #ffc06100 60%
+        );
+      }
+    }
+
+    .info__avatar {
+      background: $bg-gr-onyx;
+      border-radius: 50%;
+      transition: $transition-2;
+      box-shadow: -10px -10px 0px 0px rgba($color-gold, 0.5);
+      overflow: hidden;
+      border: 3px solid $color-jet;
+
+      img {
+        width: 80px;
+        height: 80px;
+        padding-top: 8px;
+
+        @media (min-width: 567px) {
+          width: 120px;
+          height: 120px;
+          padding-top: 12px;
+        }
+
+        @media (min-width: 1250px) {
+          width: 160px;
+          height: 160px;
+          padding-top: 16px;
+        }
+      }
+    }
+
+    .info__content {
+      #my__name {
+        color: $color-white-2;
+        font-size: $fs-3;
+        font-weight: $fw-500;
+        letter-spacing: -0.25px;
+        margin-block-end: 1rem;
+
+        @media (min-width: 567px) {
+          $fs-3: 2.6rem;
+          font-size: $fs-3;
+          margin-block-end: 1.5rem;
+        }
+
+        @media (min-width: 1250px) {
+          white-space: nowrap;
+          text-align: center;
+        }
+      }
+
+      .my__job-par {
+        overflow: hidden;
+        height: 30px;
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          top: -3px;
+          color: $color-orange;
+          font-size: 22px;
+          font-weight: bold;
+          animation: ping 4s infinite linear;
+          transition: 500ms ease;
+        }
+
+        &::before {
+          content: "{";
+          left: 3px;
+        }
+
+        &::after {
+          content: "}";
+          right: 3px;
+        }
+      }
+
+      .my__job {
+        color: $color-white-1;
+        background: $color-onyx;
+        font-size: $fs-8;
+        font-weight: $fw-300;
+        width: fit-content;
+        padding: 0.3rem 1.2rem;
+        border-radius: 0.8rem;
+        margin-inline: auto;
+        margin-block: 34px;
+        animation: upDown 8s infinite linear;
+        transition: 500ms ease;
+      }
+
+      @media (min-width: 567px) {
+        $fs-8: 1.2rem;
+        font-size: $fs-8;
+        padding: 0.5rem 1.8rem;
+      }
+
+      @media (min-width: 1250px) {
+        margin: auto;
+      }
+    }
+
+    #info-more-btn {
+      position: absolute;
+      top: -1.5rem;
+      right: -1.5rem;
+      border-radius: 0 1.5rem;
+      font-size: $fs-7;
+      padding: 0.8rem 1.1rem;
+      box-shadow: $shadow-2;
+      width: fit-content;
+
+      @media (min-width: 567px) {
+        $fs-7: 1.5rem;
+        font-size: $fs-7;
+        top: -3rem;
+        right: -3rem;
+        padding: 1rem 1.5rem;
+      }
+
+      @media (min-width: 1250px) {
+        display: none;
+      }
+
+      ion-icon {
+        transition: $transition-1;
+
+        @media (min-width: 567px) {
+          display: none;
+        }
+      }
+
+      &:is(:focus, :hover) {
+        background: $bg-gr-yellow-1;
+
+        &::before {
+          background: $bg-gr-yellow-2;
+        }
+      }
+
+      span {
+        display: none;
+        @media (min-width: 567px) {
+          display: block;
+          $fs-8: 1.2rem;
+          font-size: $fs-8;
+        }
+      }
+    }
+  }
+
+  #sidebar__info-more {
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition-2;
+
+    @media (min-width: 1250px) {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .info-more__contacts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+
+      @media (min-width: 567px) {
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        gap: 3rem 1.5rem;
+      }
+
+      .contacts__item {
+        gap: 1.6rem;
+        &:is(:focus, :hover) {
+          .item__icone {
+            background: $bg-gr-yellow-1;
+            &::before {
+              background: $bg-gr-yellow-2;
+            }
+          }
+        }
+
+        ion-icon {
+          font-size: 24px;
+        }
+      }
+
+      .item__icone {
+        width: 3rem;
+        height: 3rem;
+        position: relative;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        box-shadow: $shadow-1;
+        z-index: 1;
+        @media (min-width: 567px) {
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 1.2rem;
+          font-size: 1.8rem;
+        }
+      }
+
+      .item__info {
+        flex: 1;
+        & :is(.item__info-link, time, address) {
+          color: $color-white-2;
+          font-size: $fs-7;
+
+          @media (min-width: 567px) {
+            $fs-7: 1.5rem;
+            font-size: $fs-7;
+          }
+
+          @media (min-width: 1250px) {
+            font-weight: $fw-300;
+          }
+        }
+      }
+
+      .item__info-title {
+        color: $color-gray-70;
+        font-size: $fs-8;
+        text-transform: uppercase;
+        margin-block-end: 0.2rem;
+      }
+
+      .item__info-link {
+        max-width: calc(100% - 36px);
+        overflow: hidden;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: $transition-1;
+
+        &:hover {
+          color: $color-gray;
+        }
+      }
+    }
+  }
+
+  .info-more__socail {
+    gap: 1.5rem;
+    padding-block-end: 0.4rem;
+    padding-inline-start: 0.7rem;
+
+    @media (min-width: 1250px) {
+      justify-content: center;
+    }
+
+    .socail__links {
+      color: $color-gray-70;
+      font-size: $fs-2;
+
+      @media (min-width: 567px) {
+        $fs-2: 2.4rem;
+        font-size: $fs-2;
+      }
+
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  }
+}

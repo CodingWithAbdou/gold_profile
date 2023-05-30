@@ -1,0 +1,27 @@
+@use "../sass-utils/variables" as *;
+
+#cursor-outline {
+  display: none;
+
+  @media (min-width: 567px) {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    background: rgba($color-white-1, 0.5);
+    box-shadow: 0 0 4px white;
+    transition: $transition-1;
+
+    &.biggerThan {
+      width: 5rem;
+      height: 5rem;
+      background: $bg-gr-yellow-1;
+    }
+  }
+}

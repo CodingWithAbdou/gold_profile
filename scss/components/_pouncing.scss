@@ -1,0 +1,102 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils//helpers" as *;
+
+.content__pouncing {
+  .separator {
+    margin-block: 1rem;
+  }
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  pointer-events: none;
+  visibility: hidden;
+
+  @media (min-width: 567px) {
+    padding: 2rem;
+  }
+
+  &.active {
+    pointer-events: all;
+    visibility: visible;
+
+    .element__pounce {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .element__pounce {
+    position: relative;
+    background: $color-odd-2;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 1px solid $color-jet;
+    border-radius: 1.4rem;
+    box-shadow: $shadow-5;
+    transform: scale(1.2);
+    opacity: 0;
+    transition: $transition-1;
+    z-index: 2;
+
+    @media (min-width: 567px) {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 3rem;
+      border-radius: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      gap: 3.5rem;
+      max-width: 68rem;
+    }
+
+    .element__pounce-close {
+      width: 3.2rem;
+      height: 3.2rem;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: $color-onyx;
+      border-radius: 0.8rem;
+      color: $color-white-2;
+      font-size: 1.8rem;
+      opacity: 0.7;
+      &:is(:hover, :focus) {
+        opacity: 1;
+      }
+    }
+
+    .pounce__interface {
+      @media (min-width: 567px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .pounce__interface-avtar {
+        background: $bg-gr-onyx;
+        width: max-content;
+        border-radius: 1.4rem;
+        margin-block-end: 1.5rem;
+        box-shadow: $shadow-2;
+      }
+
+      & > img {
+        display: none;
+
+        @media (min-width: 567px) {
+          display: block;
+          width: 3.5rem;
+          flex: 1;
+        }
+
+        @media (min-width: 768px) {
+          width: 8rem;
+        }
+      }
+    }
+  }
+}

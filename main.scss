@@ -1,0 +1,19 @@
+@use "./scss/base/rest";
+@use "./scss/base/global";
+
+@use "./scss/layout/grid";
+
+@use "./scss/components/separator";
+@use "./scss/components/button";
+@use "./scss/components/cover";
+
+@use "./scss/layout/backgroundAnim";
+@use "./scss/layout/sidebar";
+@use "./scss/layout/navigation";
+
+@use "./scss/articles/about";
+@use "./scss/articles/resume";
+@use "./scss/articles/portfolio";
+@use "./scss/articles/contact";
+
+@use "./scss/layout/cursor";

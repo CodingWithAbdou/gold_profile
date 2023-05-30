@@ -1,0 +1,235 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils/helpers" as *;
+@use "../components/pouncing" as *;
+
+#about {
+  #about__info {
+    padding-block-end: 3rem;
+    color: $color-gray;
+    font : {
+      size: $fs-6;
+      weight: $fw-300;
+    }
+    line-height: 1.6;
+
+    @media (min-width: 567px) {
+      $fs-6: 1.6rem;
+      font-size: $fs-6;
+      padding-block-end: 4rem;
+    }
+
+    & > p {
+      padding-block-end: 1.5rem;
+      text-align: justify;
+    }
+  }
+
+  #services {
+    padding-block-end: 3rem;
+
+    .service__title {
+      margin-block-end: 2rem;
+    }
+
+    .servicses__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      gap: 1.6rem;
+
+      .service__item {
+        flex-direction: column;
+        gap: 1.5rem;
+        position: relative;
+        background: $border-gr-onyx;
+        padding: 2rem;
+        border-radius: 1.4rem;
+        box-shadow: $shadow-2;
+        z-index: 1;
+
+        @media (min-width: 567px) {
+          flex-direction: row;
+          gap: 1.8rem;
+          padding: 3rem;
+        }
+
+        &::before {
+          content: "";
+          @extend %forAwsomBack;
+        }
+
+        .service__box-content {
+          text-align: center;
+          @media (min-width: 567px) {
+            text-align: left;
+          }
+
+          .sevice__text-title {
+            padding-block: 0.6rem;
+          }
+
+          .service__text-par {
+            color: $color-gray;
+            font-size: $fs-7;
+            font-weight: $fw-300;
+            line-height: 1.6;
+
+            @media (min-width: 567px) {
+              $fs-7: 1.5rem;
+              font-size: $fs-7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #testimonials {
+    padding-block-end: 3rem;
+
+    .testimonials__title {
+      padding-block-end: 2rem;
+      @media (min-width: 567px) {
+        padding-block-end: 2.5rem;
+      }
+    }
+
+    .item__card-box {
+      position: relative;
+      background: $border-gr-onyx;
+      padding: 4.5rem 1.5rem 1.5rem 1.5rem;
+      border-radius: 1.4rem;
+      box-shadow: $shadow-2;
+      // cursor: pointer;
+      z-index: 1;
+
+      @media (min-width: 567px) {
+        padding: 2.5rem 3rem 3rem;
+      }
+
+      &::before {
+        content: "";
+        @extend %forAwsomBack;
+      }
+    }
+
+    .testimonials__list {
+      gap: 2rem;
+      overflow-x: auto;
+      padding: 2.5rem 1.5rem 3.5rem;
+      margin-inline: -1.5rem;
+
+      scroll-snap-type: x mandatory;
+
+      @media (min-width: 567px) {
+        gap: 3rem;
+        padding: 3rem 3rem 3.5rem;
+        margin-inline: -3rem;
+
+        .h4 {
+          margin-bottom: 1rem;
+          margin-left: 9.5rem;
+        }
+      }
+
+      .testimonials__item {
+        min-width: 100%;
+        scroll-snap-align: center;
+        cursor: pointer;
+
+        @media (min-width: 1024px) {
+          min-width: calc(50% - 1.5rem);
+        }
+
+        .testimonial__avatar {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(15px, -25px);
+          background: $bg-gr-onyx;
+          border-radius: 1.4rem;
+          box-shadow: $shadow-1;
+
+          @media (min-width: 567px) {
+            transform: translate(3rem, -3rem);
+            border-radius: 2rem;
+
+            img {
+              width: 8rem;
+              height: 8rem;
+            }
+          }
+        }
+
+        p {
+          color: $color-gray;
+          font : {
+            size: $fs-6;
+            weight: $fw-300;
+          }
+          line-height: 1.6;
+          padding-block-start: 0.7rem;
+          display: -webkit-box;
+          line-clamp: 4;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+
+          @media (min-width: 567px) {
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            $fs-6: 1.6rem;
+            font-size: $fs-6;
+          }
+        }
+      }
+    }
+  }
+
+  .content__pouncing {
+    .element__pounce {
+      @media (min-width: 768px) {
+        max-width: 68rem;
+      }
+
+      .pounce__interface {
+        & > img {
+          display: none;
+
+          @media (min-width: 567px) {
+            width: 3.5rem;
+            flex: 1;
+          }
+
+          @media (min-width: 768px) {
+            width: 8rem;
+          }
+        }
+      }
+
+      .pounce__info-testimonial {
+        .pounce__info-par p,
+        time {
+          font : {
+            weight: $fw-300;
+            size: $fs-6;
+          }
+
+          @media (min-width: 567px) {
+            $fs-6: 1.6rem;
+            font-size: $fs-6;
+          }
+        }
+
+        time {
+          color: $color-gray-70;
+          margin-block: 0.5rem 1rem;
+        }
+
+        .pounce__info-par p {
+          color: $color-gray;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}

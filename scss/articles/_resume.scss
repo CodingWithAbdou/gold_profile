@@ -1,0 +1,239 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils/helpers" as *;
+
+#resume {
+  .resume__timeline {
+    padding-block-end: 3.5rem;
+  }
+
+  .title__article {
+    margin-block-end: 2rem;
+  }
+
+  .timeline__head {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    ion-icon {
+      width: 3rem;
+      height: 3rem;
+      position: relative;
+      background: $border-gr-onyx;
+      border-radius: 0.8rem;
+      font-size: $fs-4;
+      color: $color-gold;
+      box-shadow: $shadow-1;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        @extend %forAwsomBack;
+        background: $color-odd;
+      }
+
+      @media (min-width: 567px) {
+        $fs-4: 1.8rem;
+        font-size: $fs-4;
+      }
+    }
+  }
+
+  .timeline__list {
+    font-size: $fs-7;
+    margin-left: 4.5rem;
+
+    @media (min-width: 567px) {
+      $fs-7: 1.5rem;
+      font-size: $fs-7;
+      margin-left: 6.5rem;
+    }
+
+    .timeline__item {
+      position: relative;
+      &:not(:last-child) {
+        margin-block-end: 2rem;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -2.5rem;
+          left: -3rem;
+          width: 1px;
+          height: calc(100% + 5rem);
+          background: $color-jet;
+
+          @media (min-width: 567px) {
+            left: -5rem;
+          }
+        }
+      }
+
+      .h4 {
+        font-size: $fs-6;
+        line-height: 1.3;
+        margin-bottom: 0.7rem;
+
+        @media (min-width: 567px) {
+          $fs-6: 1.6rem;
+          font-size: $fs-6;
+        }
+      }
+
+      & > span {
+        color: $color-gold;
+        font-weight: $fw-400;
+        line-height: 1.6;
+      }
+
+      & > p {
+        color: $color-gray;
+        font-weight: $fw-300;
+        text-align: justify;
+        line-height: 1.6;
+
+        @media (min-width: 1250px) {
+          max-width: 70rem;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: -3.2rem;
+        height: 6px;
+        width: 6px;
+        background: $text-gr-yellow;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0.4rem $color-jet;
+
+        @media (min-width: 567px) {
+          height: 0.8rem;
+          width: 0.8rem;
+          left: -5.3rem;
+        }
+      }
+    }
+  }
+  .skills {
+    padding-block: 2rem;
+    .skills__list {
+      .skill__item:not(:last-child) {
+        margin-block-end: 1.5rem;
+        @media (min-width: 567px) {
+          margin-block-end: 2.5rem;
+        }
+      }
+
+      .title__item {
+        margin-bottom: 1rem;
+      }
+
+      margin-block-start: 2rem;
+      padding: 2rem;
+      position: relative;
+      background: $border-gr-onyx;
+      border-radius: 1.4rem;
+      box-shadow: $shadow-2;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        @extend %forAwsomBack;
+      }
+
+      .progress {
+        background: $color-jet;
+        width: 100%;
+        height: 0.8rem;
+        border-radius: 1rem;
+
+        span {
+          width: 0;
+          height: 100%;
+          background: $text-gr-yellow;
+          border-radius: inherit;
+          position: relative;
+          transition: 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+          // &::after {
+          //   content: attr(data-width);
+          //   position: absolute;
+          // }
+        }
+      }
+    }
+  }
+}
+.languages__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 8rem 3rem;
+  margin-block: 2rem 2rem;
+  padding-block: 4rem 2rem;
+  .lang {
+    width: 240px;
+    height: 240px;
+    position: relative;
+    margin-inline: auto;
+    .outer {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      padding: 2rem;
+      box-shadow: 6px 6px 10px -1px rgba($color-gold, 0.15),
+        6px 6px 10px -1px rgba($color-onyx, 0.7);
+      .inner {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: inset 6px 6px 10px -1px rgba($color-gold, 0.15),
+          inset 6px 6px 10px -1px rgba($color-onyx, 0.7),
+          6px 6px 10px -1px rgba($color-jet, 0.1),
+          6px 6px 10px -1px rgba($color-jet, 0.025),
+          6px 6px 10px -1px rgba($color-jet, 0.05);
+        & > div {
+          color: darken($color-red, 0.7);
+          font-size: $fs-2;
+          font-weight: bold;
+          text-shadow: 0px 1px 0 $color-gold;
+        }
+      }
+    }
+    &:first-of-type {
+      circle {
+        stroke: url(#GradientColorOne);
+      }
+    }
+    &:nth-last-of-type(2) {
+      circle {
+        stroke: url(#GradientColorTwo);
+      }
+    }
+    &:last-of-type {
+      circle {
+        stroke: url(#GradientColorThree);
+      }
+    }
+    circle {
+      fill: none;
+      stroke-width: 2rem;
+      stroke-dasharray: 690;
+      stroke-dashoffset: 690;
+      transition: 1s;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-90deg);
+    }
+    .information {
+      width: 100%;
+      position: absolute;
+      bottom: -50px;
+      text-align: center;
+      color: $color-white-1;
+      font-size: $fs-2;
+      text-decoration: underline;
+    }
+  }
+}

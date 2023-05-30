@@ -1,0 +1,158 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils/helpers" as *;
+
+#contact {
+  .mapbox {
+    width: 100%;
+    height: 25rem;
+    position: relative;
+    border-radius: 1.6rem;
+    margin-block-end: 3rem;
+    border: 1px solid $color-jet;
+    overflow: hidden;
+
+    @media (min-width: 567px) {
+      height: 38rem;
+      border-radius: 1.8rem;
+    }
+
+    figure {
+      height: 100%;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        filter: grayscale(1) invert(1);
+      }
+    }
+  }
+
+  .contact-form {
+    margin-bottom: 1rem;
+
+    .form-title {
+      margin-bottom: 2rem;
+    }
+
+    .input__box {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+
+      @media (min-width: 567px) {
+        gap: 3rem;
+        margin-bottom: 3rem;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    [data-set] {
+      color: $color-white-2;
+      font-size: $fs-6;
+      font-weight: $fw-400;
+      padding: 1.2rem 2rem;
+      border: 1px solid $color-jet;
+      border-radius: 1.4rem;
+      outline: none;
+
+      @media (min-width: 567px) {
+        $fs-6: 1.6rem;
+        font-size: $fs-6;
+        padding-block: 1.5rem;
+      }
+
+      &::placeholder {
+        font-weight: $fw-500;
+      }
+
+      &:focus {
+        color: $color-orange;
+
+        &:invalid {
+          border-color: $color-red;
+        }
+      }
+    }
+
+    textarea {
+      min-height: 1rem;
+      height: 12rem;
+      min-height: 10rem;
+      max-height: 20rem;
+      resize: vertical;
+      margin-bottom: 2.5rem;
+
+      &::-webkit-resizer {
+        display: none;
+      }
+
+      @media (min-width: 567px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .form-btn {
+      width: 100%;
+      position: relative;
+      background: $border-gr-onyx;
+      color: $color-orange;
+      gap: 1rem;
+      padding: 1.2rem 2rem;
+      border-radius: 1.4rem;
+      text-transform: capitalize;
+      box-shadow: $shadow-3;
+      z-index: 1;
+      transition: $transition-1;
+
+      @media (min-width: 567px) {
+        font-size: 1.6rem;
+        padding-block: 1.6rem;
+      }
+
+      @media (min-width: 768px) {
+        width: fit-content;
+        margin-inline-start: auto;
+      }
+
+      i {
+        font-size: 1.6rem;
+
+        @media (min-width: 567px) {
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 1px;
+        background: $bg-gr-jet;
+        border-radius: inherit;
+        z-index: -1;
+        transition: $transition-1;
+      }
+
+      &:hover {
+        background: $bg-gr-yellow-1;
+
+        &::before {
+          background: $bg-gr-yellow-2;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+
+        &:hover {
+          background: $border-gr-onyx;
+
+          &::before {
+            background: $bg-gr-jet;
+          }
+        }
+      }
+    }
+  }
+}

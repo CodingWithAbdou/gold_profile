@@ -1,0 +1,62 @@
+//CUTSOM VAR +++++
+
+//________________________CUSTOME COLOR____________________________
+$color-jet: #383838;
+$color-onyx: #2b2b2c;
+$color-odd: #202022;
+$color-odd-2: #1e1e1f;
+$color-smoky: #121212;
+$color-black: #000;
+$color-white-1: #fff;
+$color-white-2: #fafafa;
+$color-orange: #ffdb70;
+$color-gold: #ceb15a;
+$color-gray: #d6d6d6b3;
+$color-gray-70: rgba($color-gray, 0.7);
+$color-red: #b84c4c;
+// _______________________________________________________________|
+
+// ______________________________GRADIENY________________________________________________
+$bg-gr-jet: linear-gradient(to bottom right, #2d2d2e40 0%, #1b1b1d00 100%),
+  #202022;
+$bg-gr-onyx: linear-gradient(to bottom right, #3f3f40 3%, #303030 97%);
+$bg-gr-yellow-1: linear-gradient(to bottom right, #ffda6b 0%, #ffc06100 50%);
+$bg-gr-yellow-2: linear-gradient(135deg, #ffda6b40 0%, #ffbb5c00 59.86%),
+  #202022;
+$border-gr-onyx: linear-gradient(to bottom right, #404040 0%, #40404000 50%);
+$text-gr-yellow: linear-gradient(to right, #ffdb70, #ffbb5c);
+//___________________________________________________________________________________|
+
+//______________FONT FAMILY_________________
+$fontFamily-poppins: "Poppins", sans-serif;
+//__________________________________________|
+
+//___FONT SIZE___
+$fs-1: 2.4rem;
+$fs-2: 1.8rem;
+$fs-3: 1.7rem;
+$fs-4: 1.6rem;
+$fs-5: 1.5rem;
+$fs-6: 1.4rem;
+$fs-7: 1.3rem;
+$fs-8: 1.1rem;
+
+//_FONT WIEGHT_
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+//_____________|
+
+//_________________BOX SHADOW______________________
+$shadow-1: -4px 8px 24px rgba($color-black, 0.25);
+$shadow-2: 0 16px 30px rgba($color-black, 0.25);
+$shadow-3: 0 16px 40px rgba($color-black, 0.25);
+$shadow-4: 0 25px 50px rgba($color-black, 0.15);
+$shadow-5: 0 24px 80px rgba($color-black, 0.25);
+//_________________________________________________|
+
+//TRANSTION_______________________
+$transition-1: 0.25s ease;
+$transition-2: 0.5s ease-in-out;
+//_______________________________|

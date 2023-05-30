@@ -1,0 +1,15 @@
+@use "../sass-utils/variables" as *;
+@use "../sass-utils//helpers" as *;
+
+.btn-hov {
+  color: $color-orange;
+  background: $border-gr-onyx;
+  transition: $transition-1;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    @extend %forAwsomBack;
+    transition: $transition-1;
+  }
+}
