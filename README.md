@@ -5,4 +5,4 @@
 
 See the profile by clicking here
 
-[Link text Here](https://codingwithabdou.github.io/gold_profile/)
+[Gold_Profile](https://codingwithabdou.github.io/gold_profile/)
