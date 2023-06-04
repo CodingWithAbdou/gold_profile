@@ -7,6 +7,6 @@
 
 
 <div class=align-center>
-  ## <a href="https://codingwithabdou.github.io/gold_profile/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codingwithabdou.github.io/gold_profile/"><strong>## ➥ Live Demo</strong></a>
 </div>
 
