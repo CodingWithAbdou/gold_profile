@@ -2,7 +2,7 @@
 
   <br />
 
-  <h2 align="center">Golden Profiler</h2>
+  <h1 align="center">Golden Profiler</h1>
 
   A fully responsive web Golden Profile , <br />Responsive for all devices, build using html, scss, and javascript.
   <br />
